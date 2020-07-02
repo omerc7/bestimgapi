@@ -1,0 +1,3 @@
+
+class NoFacesDetected(Exception):
+    pass
