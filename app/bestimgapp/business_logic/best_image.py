@@ -1,7 +1,7 @@
 import itertools
 from typing import List
 
-from image_processing.face_wrapper import FaceClientWrapper
+from ..image_processing.face_wrapper import FaceClientWrapper
 from .mappers import face_id_to_img
 from .filters import largest_face_in
 from .errors import NoFacesDetected

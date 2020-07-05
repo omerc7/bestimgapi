@@ -2,7 +2,7 @@ from typing import Iterable
 
 import pytest
 
-from ..validators import (
+from ..validators_url import (
     validate_image_url,
     validate_image_urls,
 )

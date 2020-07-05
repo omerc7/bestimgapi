@@ -19,6 +19,5 @@ class ProcessedImage:
     face_ids_to_size: Union[Dict[str, int], Dict] = field(default_factory=dict)
 
     def __bool__(self) -> bool:
-        """ returns True if faces detected in image
-        """
+        """ returns True if faces detected in image"""
         return bool(self.num_of_faces)

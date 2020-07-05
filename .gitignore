@@ -1,0 +1,6 @@
+*.pyc # pycache
+*.pyo # pycache optimized mode
+*.log
+.coverage
+__pycache__
+.pytest_cache

@@ -1,5 +1,5 @@
 from typing import Type
-from abc import ABC, abstractstaticmethod
+from abc import ABC, abstractstaticmethod, abstractmethod
 
 from .source import Source
 
@@ -8,7 +8,12 @@ _formators = {}
 
 
 def get_formator(src: Source) -> Type['BaseFormator']:
-    # will raise KeyError if src not in _formators
+    """Return the formator class requested
+
+    :raise: KeyError if src formator not in _formators,
+            needs to derive from BaseFormator to subscribe via __subclass_init__ 
+    :return: class of Formator requested
+    """
     return _formators[src]
 
 
