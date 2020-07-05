@@ -1,12 +1,13 @@
 # Best Image App
 
-This app will return the **best image\*** out of a bunch of images \* best image - The image with the biggest most popular face in the images
+This app will return the **best image\*** out of a bunch of images \
+\* best image - The image with the biggest most popular face in the images
 
 # To Run Locally
 
 Run in the command line
 
-> docker build -t best_image_app .
+> docker build -t best_image_app . \
 > docker run -d -p 80:80 best_image_app
 
 # Use
