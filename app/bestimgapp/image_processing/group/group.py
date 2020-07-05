@@ -12,7 +12,7 @@ class ProccesedGroup:
 
     @property
     def largest_group(self):
-        """ Does not include messy group"""
+        # Does not include messy group
         if not self.cashed_largest_groups:
             self.cashed_largest_groups = max(self.groups, key=len)
         return self.cashed_largest_groups

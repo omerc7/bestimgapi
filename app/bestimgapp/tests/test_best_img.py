@@ -33,6 +33,16 @@ def test_best_with_image_ronaldo(client):
     ).decode("utf-8") == 'https://i0.wp.com/sportytell.com/wp-content/uploads/2018/11/cristiano-ronaldo-juventus.jpg'
 
 
+def test_best_image_working_one_img(client):
+    """Test working with only one image with a face"""
+    imgs = ','.join([
+        'https://usatftw.files.wordpress.com/2020/04/jordan-3.jpg',
+    ])
+    response = client.get(f'/best_image/best_face_image?imgs={imgs}')
+    assert response.get_data(
+    ).decode("utf-8") == 'https://usatftw.files.wordpress.com/2020/04/jordan-3.jpg'
+
+
 def test_best_with_image_no_faces(client):
     imgs = ','.join([
         'https://static.scientificamerican.com/sciam/cache/file/4E0744CD-793A-4EF8-B550B54F7F2C4406_source.jpg',

@@ -41,7 +41,6 @@ class FaceClientWrapper:
             try:
                 imgs.append(self.detect_faces(url))
             except Exception as ex:
-                # if error in detection should not crash
                 log.warning(
                     f"Error detecting faces in url: {url}, error: {ex}")
                 if throw:
